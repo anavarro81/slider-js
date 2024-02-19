@@ -1,6 +1,8 @@
 let sliderInner$$ = document.querySelector(".slider-inner")
+let allImages$$ = document.querySelectorAll("img")
 
 let index = 0;
+let nImagenes = allImages$$.length
 
 setInterval(() => {
     
@@ -8,7 +10,7 @@ setInterval(() => {
     sliderInner$$.style.transform = "translateX("+ desplazamiento + "%)";    
     index++;
     
-    if (index > 4) {
+    if (index > nImagenes-1) {
         index = 0
     }
 
